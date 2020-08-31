@@ -1,0 +1,371 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/root_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#deeadc">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#deeadc"
+        android:orientation="vertical">
+
+        <androidx.appcompat.widget.Toolbar
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:subtitle="Sub"
+            app:title="AndroidlyToolbar"
+            tools:ignore="MissingConstraints">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/profilename"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:text=""
+                    android:textColor="#ffffff"
+                    android:textSize="20dp" />
+
+
+                <ImageView
+                    android:id="@+id/Edit"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="300dp"
+                    android:layout_marginTop="5dp"
+                    android:src="@drawable/ic_action_edit"
+                    android:text="edit" />
+
+
+                <ImageView
+                    android:id="@+id/saving"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="300dp"
+                    android:layout_marginTop="5dp"
+                    android:src="@drawable/ic_action_save"
+                    android:text="Save" />
+
+                <ImageView
+                    android:id="@+id/Updating"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="300dp"
+                    android:layout_marginTop="5dp"
+                    android:src="@drawable/ic_action_save"
+                    android:text="Save" />
+
+            </RelativeLayout>
+
+        </androidx.appcompat.widget.Toolbar>
+
+        <com.mikhaellopez.circularimageview.CircularImageView
+            android:id="@+id/photos"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:layout_marginStart="100dp"
+            android:layout_marginLeft="100dp"
+            android:layout_marginTop="50dp"
+            android:src="@drawable/ic_launcher_background"
+            app:civ_border="true"
+            app:civ_border_color="#FFFFFF"
+            app:civ_border_width="4dp"
+            app:civ_shadow="false"
+            app:civ_shadow_color="#8BC34A"
+            app:civ_shadow_radius="10"
+            tools:context=".photo.PhotoActivity"
+            tools:ignore="MissingConstraints"
+            tools:layout_editor_absoluteX="130dp"
+            tools:layout_editor_absoluteY="62dp" />
+
+        <Button
+            android:id="@+id/btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="10dp"
+            android:text="Select or Capture Image" />
+
+        <LinearLayout
+            android:id="@+id/eee1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="20dp"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="20dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/edittext01"
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:text="Name"
+                    android:textSize="18sp"
+                    android:visibility="visible" />
+
+                <EditText
+                    android:id="@+id/edittext_name1"
+                    android:layout_width="190dp"
+                    android:layout_height="wrap_content"
+                    android:hint="enter name"
+                    android:inputType="text"
+                    android:textSize="18sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                android:layout_marginLeft="10dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/edittext02"
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:inputType="text"
+                    android:text="Email"
+                    android:textSize="18sp" />
+
+                <EditText
+                    android:id="@+id/edittext_surname1"
+                    android:layout_width="190dp"
+                    android:layout_height="wrap_content"
+                    android:hint="enter email"
+                    android:inputType="textEmailAddress"
+                    android:textSize="18sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/edittext04"
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:inputType="text"
+                    android:text="School Name"
+                    android:textSize="18sp" />
+
+                <EditText
+                    android:id="@+id/edittext_schoolname1"
+                    android:layout_width="190dp"
+                    android:layout_height="wrap_content"
+                    android:hint="SecondarySchoolName             "
+                    android:inputType="text"
+                    android:textSize="18sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/edittext06"
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:text="Grade"
+                    android:textSize="18sp" />
+
+                <EditText
+                    android:id="@+id/edittext_grade1"
+                    android:layout_width="190dp"
+                    android:layout_height="wrap_content"
+                    android:hint="ssc percentage                             "
+                    android:inputType="numberDecimal"
+                    android:textSize="18sp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/edittext08"
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:text="+2 College Name"
+                    android:textSize="18sp" />
+
+                <EditText
+                    android:id="@+id/edittext_college1"
+                    android:layout_width="190dp"
+                    android:layout_height="wrap_content"
+                    android:hint="+2 college name                 "
+                    android:inputType="text"
+                    android:textSize="18sp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/edittext010"
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:text="Percentage"
+                    android:textSize="18sp" />
+
+                <EditText
+                    android:id="@+id/edittext_percentage1"
+                    android:layout_width="190dp"
+                    android:layout_height="wrap_content"
+                    android:hint="+2 percentage                     "
+                    android:inputType="numberDecimal"
+                    android:textSize="18sp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/edittext012"
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:text="University Name"
+                    android:textSize="18sp" />
+
+                <EditText
+                    android:id="@+id/edittext_university1"
+                    android:layout_width="190dp"
+                    android:layout_height="wrap_content"
+                    android:hint="B.tech college/universityname    "
+                    android:inputType="text"
+                    android:textSize="18sp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/edittext014"
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:text="Percentage"
+                    android:textSize="18sp" />
+
+                <EditText
+                    android:id="@+id/edittext_percent1"
+                    android:layout_width="190dp"
+                    android:layout_height="wrap_content"
+                    android:hint="B.tech percentage                                  "
+                    android:inputType="numberDecimal"
+                    android:textSize="18sp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/edittext016"
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:text="Address"
+                    android:textSize="18sp" />
+
+                <EditText
+                    android:id="@+id/edittext_address1"
+                    android:layout_width="190dp"
+                    android:layout_height="wrap_content"
+                    android:hint=""
+                    android:inputType="text"
+                    android:textSize="18sp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/edittext020"
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:text="Hobbies"
+                    android:textSize="18sp" />
+
+                <EditText
+                    android:id="@+id/edittext_hobbies1"
+                    android:layout_width="190dp"
+                    android:layout_height="wrap_content"
+                    android:hint="                "
+                    android:inputType="text"
+                    android:textSize="18sp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/edittext022"
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:text="Contact_no"
+                    android:textSize="18sp" />
+
+                <EditText
+                    android:id="@+id/edittext_contact1"
+                    android:layout_width="190dp"
+                    android:layout_height="wrap_content"
+
+                    android:hint="phone number"
+                    android:textSize="18sp" />
+
+
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>

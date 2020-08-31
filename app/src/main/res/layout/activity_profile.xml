@@ -1,0 +1,769 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    >
+
+    <data>
+        <variable
+            name="playButton"
+            type="java.lang.Boolean" />
+        <variable
+            name="profileActivityViewModel"
+            type="com.example.Bottom.ProfileActivity.ProfileActivityViewModel" />
+    </data>
+
+<ScrollView
+    android:id="@+id/root_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#deeadc">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#deeadc"
+        android:orientation="vertical">
+
+
+        <androidx.appcompat.widget.Toolbar
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:subtitle="Sub"
+            app:title="AndroidlyToolbar"
+            tools:ignore="MissingConstraints">
+
+            <ImageView
+                android:id="@+id/backButton"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:src="@drawable/ic_action_backbutton"
+                tools:ignore="ContentDescription" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+
+                <TextView
+                    android:id="@+id/profilename"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:paddingStart="10dp"
+                    android:paddingLeft="10dp"
+                    android:text="gggg"
+                    android:textColor="#ffffff"
+                    android:textSize="20sp"
+                    tools:ignore="HardcodedText,RtlSymmetry" />
+
+
+                <ImageView
+
+                    android:id="@+id/Editing"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:paddingRight="50dp"
+                    android:src="@drawable/ic_action_edit"
+                    android:textColor="#ffffff"
+                    tools:ignore="HardcodedText" />
+
+
+                <ImageView
+                    android:id="@+id/Edit"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerHorizontal="false"
+                    android:layout_centerVertical="true"
+                    android:paddingRight="40dp"
+                    android:src="@drawable/ic_action_edit"
+
+                    android:text="edit"
+
+                    tools:ignore="ContentDescription,HardcodedText,UnusedAttribute" />
+
+
+                <ImageView
+
+                    android:id="@+id/buttonOptions1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignRight="@+id/Editing"
+                    android:layout_centerHorizontal="false"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/ic_action_deleting"
+                    android:text="edit"
+                    tools:ignore="ContentDescription,HardcodedText,UnusedAttribute" />
+
+
+                <ImageView
+                    android:onClick="@{()-> profileActivityViewModel.save()}"
+                    android:id="@+id/saving"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginTop="5dp"
+
+
+                    android:paddingRight="40dp"
+                    android:src="@drawable/ic_action_save"
+                    android:text="Save"
+                    tools:ignore="ContentDescription" />
+
+                <ImageView
+                    android:id="@+id/Updating"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginTop="5dp"
+
+                    android:paddingRight="40dp"
+                    android:src="@drawable/ic_action_save"
+                    android:text="Save" />
+
+            </RelativeLayout>
+
+        </androidx.appcompat.widget.Toolbar>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/constraintLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <RelativeLayout
+                android:id="@+id/fragmentholders"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                tools:ignore="MissingConstraints"
+                tools:layout_editor_absoluteX="27dp"
+                tools:layout_editor_absoluteY="0dp"></RelativeLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        <com.mikhaellopez.circularimageview.CircularImageView
+            android:id="@+id/photos"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="30dp"
+            android:src="@drawable/ic_launcher_background"
+            app:civ_border="true"
+            app:civ_border_color="#FFFFFF"
+            app:civ_border_width="4dp"
+            app:civ_shadow="false"
+            app:civ_shadow_color="#8BC34A"
+            app:civ_shadow_radius="10"
+            tools:context=".photo.PhotoActivity"
+            tools:ignore="MissingConstraints"
+            tools:layout_editor_absoluteX="130dp"
+            tools:layout_editor_absoluteY="62dp" />
+
+        <Button
+            android:id="@+id/btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="10dp"
+
+            android:text="Select or Capture Image" />
+
+        <LinearLayout
+            android:id="@+id/ee"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginStart="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginLeft="10dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/textview1"
+                    android:layout_width="180dp"
+                    android:layout_height="match_parent"
+                    android:inputType="text"
+                    android:text="Name"
+                    android:textSize="18sp"
+                    tools:ignore="HardcodedText,TextViewEdits" />
+
+                <TextView
+                    android:id="@+id/profile_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:inputType="text"
+                    android:text="@{profileActivityViewModel.message}"
+                    android:textSize="18sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="5pt"
+
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/textview2"
+                    android:layout_width="180dp"
+                    android:layout_height="match_parent"
+                    android:text="Email"
+
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:id="@+id/profile_text1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_below="@+id/profile_text"
+                    android:text=""
+                    android:textSize="18sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/bb"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="5pt"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/textview3"
+                        android:layout_width="180dp"
+                        android:layout_height="match_parent"
+                        android:text="School Name"
+                        android:textSize="18sp" />
+
+                    <TextView
+                        android:id="@+id/profile_text2"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:text=""
+                        android:textSize="18sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="5pt"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/textview4"
+                        android:layout_width="180dp"
+                        android:layout_height="match_parent"
+                        android:text="Grade"
+                        android:textSize="18sp" />
+
+
+                    <TextView
+                        android:id="@+id/profile_text3"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_below="@+id/profile_text"
+                        android:text=""
+                        android:textSize="18sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="5pt"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/textview5"
+                        android:layout_width="180dp"
+                        android:layout_height="match_parent"
+                        android:text="College"
+                        android:textSize="18sp" />
+
+
+                    <TextView
+                        android:id="@+id/profile_text4"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:text=""
+                        android:textSize="18sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="5pt"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/textview6"
+                        android:layout_width="180dp"
+                        android:layout_height="match_parent"
+                        android:text="Percentage"
+                        android:textSize="18sp" />
+
+                    <TextView
+                        android:id="@+id/profile_text5"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_below="@+id/profile_text"
+                        android:text=""
+                        android:textSize="18sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="5pt"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/textview7"
+                        android:layout_width="180dp"
+                        android:layout_height="match_parent"
+                        android:text="University"
+                        android:textSize="18sp" />
+
+
+                    <TextView
+                        android:id="@+id/profile_text6"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:text=""
+                        android:textSize="18sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="5pt"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/textview8"
+                        android:layout_width="180dp"
+                        android:layout_height="match_parent"
+                        android:text="Percentage1"
+                        android:textSize="18sp" />
+
+                    <TextView
+                        android:id="@+id/profile_text7"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_below="@+id/profile_text"
+                        android:text=""
+                        android:textSize="18sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="5pt"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/textview9"
+                        android:layout_width="180dp"
+                        android:layout_height="match_parent"
+                        android:text="address "
+                        android:textSize="18sp" />
+
+
+                    <TextView
+                        android:id="@+id/profile_text8"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_below="@+id/profile_text"
+                        android:text=""
+                        android:textSize="18sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="5pt"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/textview10"
+                        android:layout_width="180dp"
+                        android:layout_height="match_parent"
+                        android:text="Hobbiess"
+                        android:textSize="18sp" />
+
+                    <TextView
+                        android:id="@+id/profile_text9"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:text=""
+                        android:textSize="18sp" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="5pt"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/textview11"
+                    android:layout_width="180dp"
+                    android:layout_height="match_parent"
+                    android:text="Contact"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:id="@+id/profile_text10"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_below="@+id/profile_text"
+                    android:text=""
+                    android:textSize="18sp" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/eee"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="20dp"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="20dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/edittext"
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:text="@{profileActivityViewModel.message}"
+                    android:textSize="18sp"
+                    android:visibility="visible" />
+
+                <EditText
+                    android:id="@+id/edittext_name"
+                    android:layout_width="190dp"
+                    android:layout_height="wrap_content"
+                    android:hint="enter name"
+                    android:inputType="text"
+                    android:text="@={profileActivityViewModel.names}"
+                    android:textSize="18sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                android:layout_marginLeft="10dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/edittext2"
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:inputType="text"
+                    android:text="Email"
+                    android:textSize="18sp" />
+
+                <EditText
+                    android:id="@+id/edittext_surname"
+                    android:layout_width="190dp"
+                    android:layout_height="wrap_content"
+                    android:hint="enter email"
+                    android:inputType="textEmailAddress"
+                    android:textSize="18sp" />
+            </LinearLayout>
+            <!--<LinearLayout-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_marginLeft="10dp"-->
+            <!--android:orientation="horizontal">-->
+
+            <!--<TextView-->
+            <!--android:id="@+id/edittext24"-->
+            <!--android:layout_width="150dp"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:text="DateofBirth"-->
+            <!--android:textSize="18sp" />-->
+
+            <!--<TextView-->
+            <!--android:id="@+id/edittext_dateofbirth"-->
+            <!--android:layout_width="120dp"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:inputType="text"-->
+            <!--android:layout_marginTop="5dp"-->
+            <!--android:textColor="#000000"-->
+            <!--android:text="&#45;&#45;/&#45;&#45;/&#45;&#45;&#45;&#45;"-->
+            <!--android:backgroundTintMode="add"-->
+            <!--android:textSize="18sp" />-->
+            <!--<ImageView-->
+            <!--android:layout_width="50dp"-->
+            <!--android:id="@+id/calender"-->
+            <!--android:layout_marginTop="5dp"-->
+            <!--android:layout_gravity="end"-->
+            <!--android:src="@drawable/ic_action_dateofbirth"-->
+            <!--android:layout_height="40dp" />-->
+
+            <!--</LinearLayout>-->
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/edittext4"
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:inputType="text"
+                    android:text="School Name"
+                    android:textSize="18sp" />
+
+                <EditText
+                    android:id="@+id/edittext_schoolname"
+                    android:layout_width="190dp"
+                    android:layout_height="wrap_content"
+                    android:hint="SecondarySchoolName             "
+                    android:inputType="text"
+                    android:textSize="18sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/edittext6"
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:text="Grade"
+                    android:textSize="18sp" />
+
+                <EditText
+                    android:id="@+id/edittext_grade"
+                    android:layout_width="190dp"
+                    android:layout_height="wrap_content"
+                    android:hint="ssc percentage                             "
+                    android:inputType="numberDecimal"
+                    android:textSize="18sp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/edittext8"
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:text="+2 College Name"
+                    android:textSize="18sp" />
+
+                <EditText
+                    android:id="@+id/edittext_college"
+                    android:layout_width="190dp"
+                    android:layout_height="wrap_content"
+                    android:hint="+2 college name                 "
+                    android:inputType="text"
+                    android:textSize="18sp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/edittext10"
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:text="Percentage"
+                    android:textSize="18sp" />
+
+                <EditText
+                    android:id="@+id/edittext_percentage"
+                    android:layout_width="190dp"
+                    android:layout_height="wrap_content"
+                    android:hint="+2 percentage                     "
+                    android:inputType="numberDecimal"
+                    android:textSize="18sp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/edittext12"
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:text="University Name"
+                    android:textSize="18sp" />
+
+                <EditText
+                    android:id="@+id/edittext_university"
+                    android:layout_width="190dp"
+                    android:layout_height="wrap_content"
+                    android:hint="B.tech college/universityname    "
+                    android:inputType="text"
+                    android:textSize="18sp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/edittext14"
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:text="Percentage"
+                    android:textSize="18sp" />
+
+                <EditText
+                    android:id="@+id/edittext_percent"
+                    android:layout_width="190dp"
+                    android:layout_height="wrap_content"
+                    android:hint="B.tech percentage                                  "
+                    android:inputType="numberDecimal"
+                    android:textSize="18sp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/edittext16"
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:text="Address"
+                    android:textSize="18sp" />
+
+                <EditText
+                    android:id="@+id/edittext_address"
+                    android:layout_width="190dp"
+                    android:layout_height="wrap_content"
+                    android:hint=""
+                    android:inputType="text"
+                    android:textSize="18sp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/edittext20"
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:text="Hobbies"
+                    android:textSize="18sp" />
+
+                <EditText
+                    android:id="@+id/edittext_hobbies"
+                    android:layout_width="190dp"
+                    android:layout_height="wrap_content"
+                    android:hint="                "
+                    android:inputType="text"
+                    android:textSize="18sp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/edittext22"
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:text="Contact_no"
+                    android:textSize="18sp" />
+
+                <EditText
+                    android:id="@+id/edittext_contact"
+                    android:layout_width="190dp"
+                    android:layout_height="wrap_content"
+                    android:hint="phone number"
+                    android:inputType="phone"
+                    android:textSize="18sp" />
+
+
+            </LinearLayout>
+
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>
+</layout>
+
+
+
+

@@ -1,0 +1,14 @@
+<root>
+    <item name='android.content.Context'>
+        <annotation name='java.lang.Deprecated' />
+    </item>
+    <item name='android.content.Context SEARCH_SERVICE'>
+        <annotation name='java.lang.Deprecated' />
+    </item>
+    <item name='android.content.Context SYSTEM_HEALTH_SERVICE'>
+        <annotation name='org.jetbrains.annotations.NotNull' />
+    </item>
+    <item name='android.content.Intent'>
+        <annotation name='java.lang.Deprecated' />
+    </item>
+</root>

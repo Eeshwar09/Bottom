@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        xmlns:android="http://schemas.android.com/apk/res/android" >
+        <com.mikhaellopez.circularimageview.CircularImageView android:id="@+id/photo"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:src="@drawable/ic_launcher_background"
+            app:civ_border="true"
+            android:layout_marginLeft="100dp"
+            android:layout_marginTop="50dp"
+            app:civ_border_color="#FFFFFF"
+            app:civ_border_width="4dp"
+            tools:context=".PhotoActivity"
+            app:civ_shadow="false"
+            app:civ_shadow_color="#8BC34A"
+            app:civ_shadow_radius="10"
+            tools:ignore="MissingConstraints"
+            tools:layout_editor_absoluteX="130dp"
+            tools:layout_editor_absoluteY="62dp"
+            xmlns:tools="http://schemas.android.com/tools"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            xmlns:android="http://schemas.android.com/apk/res/android" />
+
+
+    </LinearLayout>
+</selector>
